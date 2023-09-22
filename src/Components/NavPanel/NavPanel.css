@@ -1,0 +1,163 @@
+.nav-panel {
+  max-width: 345px;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.15);
+  position: fixed;
+}
+
+.nav-panel .nav-list .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  color: #737791;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  gap: 24px;
+  padding: 12px 24px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-panel .nav-logo {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  cursor: pointer;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-panel .nav-logo h1 {
+  color: #151d48;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  margin-left: 24px;
+}
+
+.nav-panel .nav-logo a {
+  text-decoration: none;
+}
+
+.nav-panel .nav-list .nav-item {
+  list-style: none;
+}
+
+.nav-panel .nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.nav-link:hover {
+  border-radius: 16px;
+  background: #1b417a;
+  box-shadow: 0px 20px 50px 0px rgba(55, 69, 87, 0.1);
+  color: #fff !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover svg {
+  fill: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link.active {
+  border-radius: 16px;
+  background: #1b417a;
+  box-shadow: 0px 20px 50px 0px rgba(55, 69, 87, 0.1);
+  color: #fff !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.nav-item {
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-menu-mobile-icon {
+  display: none;
+}
+
+.nav-panel.dark-theme {
+  background: #1c1c1c;
+  color: #fff;
+}
+
+.nav-panel.dark-theme .nav-logo h1 {
+  color: #fff;
+}
+
+@media screen and (max-width: 1440px) {
+  .nav-panel {
+    position: fixed;
+    left: -345px;
+    transition: 0.3s ease-in-out;
+    padding-top: 70px;
+  }
+
+  .nav-menu-mobile-icon {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    z-index: 999;
+  }
+
+  .nav-menu-mobile-icon a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .nav-panel.open {
+    left: 0;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .nav-panel.open {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.54);
+    position: fixed;
+  }
+
+  .nav-panel.open .nav-logo {
+    padding-top: 70px;
+    transform: translate(0, 0);
+    transition: all 0.3s ease-in-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.21, 1.25);
+  }
+
+  .nav-panel.open .nav-ad {
+    margin-top: 1vh;
+    transform: translate(0, 0);
+    transition: all 0.3s ease-in-out;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.21, 1.25);
+  }
+}

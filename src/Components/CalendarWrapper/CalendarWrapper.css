@@ -1,0 +1,70 @@
+.calendar-wrapper {
+  padding-left: 345px;
+  padding-top: 70px;
+}
+
+.calendar-wrapper-content {
+  padding: 0 30px;
+}
+
+.react-calendar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  border: none !important;
+}
+
+.calendar-wrapper-content-header {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-wrapper-content-header img {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.home-wrapper-content-body-calendar
+  .calendar-wrapper-content-events
+  .users-wrapper-content-body-item-left
+  .users-wrapper-content-body-item-id {
+  display: none;
+}
+
+.home-wrapper-content-body-calendar
+  .calendar-wrapper-content-events
+  .users-wrapper-content-body-item-left
+  .users-wrapper-content-body-item-name,
+.home-wrapper-content-body-calendar
+  .calendar-wrapper-content-events
+  .users-wrapper-content-body-item-left
+  .users-wrapper-content-body-item-visit,
+.home-wrapper-content-body-calendar
+  .calendar-wrapper-content-events
+  .users-wrapper-content-body-item-left
+  .users-wrapper-content-body-item-ngo {
+  width: 100px;
+}
+
+.home-wrapper-content-body-calendar
+  .calendar-wrapper-content-events
+  .users-wrapper-content-body-item-right {
+  display: none;
+}
+
+.home-wrapper-content-body-calendar
+  .calendar-wrapper-content-events
+  .users-wrapper-content-body-item-visit {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+  .calendar-wrapper {
+    padding-left: 0;
+  }
+  .calendar-wrapper-content-users {
+    overflow: auto;
+  }
+}

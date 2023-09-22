@@ -1,0 +1,76 @@
+.record-wrapper-header {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.record-wrapper-choice-btn {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.record-wrapper-choices {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.record-wrapper-btn-btn {
+  background-color: #1b417a;
+  color: #ffffff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+}
+
+.record-wrapper-btn {
+  text-align: center;
+}
+
+.record-wrapper-choice h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.record-wrapper-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.record-wrapper-header img {
+  width: 50px;
+  height: 50px;
+}
+
+.record-wrapper h2 {
+  text-align: center;
+}
+
+.record-wrapper-choice h3:first-child {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .record-wrapper-header {
+    font-size: 10px;
+  }
+  .record-wrapper-header img {
+    width: 30px;
+    height: 30px;
+  }
+}
