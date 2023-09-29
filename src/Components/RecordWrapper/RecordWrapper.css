@@ -67,7 +67,7 @@
 
 .record-footer {
   background: #1b417a;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
