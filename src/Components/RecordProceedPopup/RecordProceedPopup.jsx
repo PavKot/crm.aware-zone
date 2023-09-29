@@ -13,6 +13,8 @@ const RecordProceedPopup = ({
 }) => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
+  const [details, setDetails] = useState("");
+  const [contacts, setContacts] = useState("");
   const [openSuccess, setOpenSuccess] = useState(false);
   const handleProceedRecord = () => {
     axios
@@ -21,6 +23,8 @@ const RecordProceedPopup = ({
         number: document.getElementById("recordnumber").value,
         date: activeDate,
         place: activePlace,
+        details: document.getElementById("recorddetails").value,
+        contacts: document.getElementById("recordcontacts").value,
       })
       .then((response) => {
         setOpenProceed(false);
@@ -32,7 +36,7 @@ const RecordProceedPopup = ({
       <div className={`add-user-popup-wrapper ${openProceed ? "open" : ""}`}>
         <div className="add-user-popup-wrapper-content">
           <div className="add-user-popup-wrapper-content-header">
-            <h1>Перевірте дані і вкажіть ваше ім'я</h1>
+            <h1>Перевірте дані і вкажіть додаткові дані</h1>
             <a href="#" onClick={() => setOpenProceed(false)}>
               <AiOutlineClose />
             </a>
@@ -56,7 +60,24 @@ const RecordProceedPopup = ({
               name="recordnumber"
               onChange={(e) => setNumber(e.target.value)}
             />
-            <button className="hub-card-btn" onClick={handleProceedRecord}>
+            <input
+              type="text"
+              placeholder="Додаткові деталі"
+              id="recorddetails"
+              name="recorddetails"
+              onChange={(e) => setDetails(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Ваш контакт у соціальній мережі(Telegram, Instagram, Facebook)"
+              id="recordcontacts"
+              name="recordcontacts"
+              onChange={(e) => setContacts(e.target.value)}
+            />
+            <button
+              className="hub-card-btn-proceed"
+              onClick={handleProceedRecord}
+            >
               Підтвердити
             </button>
           </div>
@@ -75,6 +96,8 @@ const RecordProceedPopup = ({
             <p>{activeDate}</p>
             <p>{name}</p>
             <p>{number}</p>
+            <p>{details}</p>
+            <p>{contacts}</p>
           </div>
         </div>
       </div>

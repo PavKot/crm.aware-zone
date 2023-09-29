@@ -5,7 +5,7 @@
 
 .record-wrapper-choice-btn {
   border: none;
-  background: none;
+  background: #fff;
   outline: none;
   cursor: pointer;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
@@ -63,6 +63,43 @@
 
 .record-wrapper-choice h3:first-child {
   font-size: 20px;
+}
+
+.record-footer {
+  background: #1b417a;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.record-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.record-footer a span {
+  text-decoration: underline;
+}
+
+.record-wrapper-header-block {
+  background: url("../../Images/recordImg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.record-wrapper-header h1 span {
+  background: #1b417a;
+  color: #fff;
+  padding: 5px;
 }
 
 @media screen and (max-width: 768px) {

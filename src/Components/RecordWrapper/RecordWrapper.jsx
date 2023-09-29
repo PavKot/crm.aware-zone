@@ -7,6 +7,7 @@ import emojiGlasses from "../../Images/emojiGlasses.png";
 import HubPopup from "../HubPopup/HubPopup";
 import DataPopup from "../DataPopup/DataPopup";
 import RecordProceedPopup from "../RecordProceedPopup/RecordProceedPopup";
+import recordImg from "../../Images/recordImg.jpg";
 
 const RecordWrapper = () => {
   const [activePlace, setActivePlace] = useState(0);
@@ -33,12 +34,17 @@ const RecordWrapper = () => {
         activeDate={activeDate}
         activePlace={activePlace}
       />
+
       <div className="record-wrapper">
-        <div className="record-wrapper-header">
-          <h1>Записатись у aWARe Zone</h1>
-          <img src={emojiGlasses} alt="emojiGlasses" />
+        <div className="record-wrapper-header-block">
+          <div className="record-wrapper-header">
+            <h1>
+              Записатись у <span>aWARe Zone</span>
+            </h1>
+            <img src={emojiGlasses} alt="emojiGlasses" />
+          </div>
+          <h2>Чекаємо на тебе</h2>
         </div>
-        <h2>Чекаємо на тебе</h2>
         <div className="record-wrapper-choices">
           <button
             className="record-wrapper-choice-btn"
@@ -80,6 +86,11 @@ const RecordWrapper = () => {
           </button>
         </div>
       </div>
+      <footer className="record-footer">
+        <a href="https://aware-zone.com/">
+          Повернутись на сайт <span>aWARe Zone</span>
+        </a>
+      </footer>
     </>
   );
 };
