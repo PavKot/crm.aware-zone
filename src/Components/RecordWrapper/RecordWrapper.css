@@ -110,4 +110,8 @@
     width: 30px;
     height: 30px;
   }
+
+  .record-wrapper {
+    padding-bottom: 100px;
+  }
 }
