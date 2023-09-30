@@ -6,9 +6,17 @@ import "react-calendar/dist/Calendar.css";
 import moment from "moment";
 
 const DataPopup = ({ openData, setOpenData, setActiveDate }) => {
+  const registeredDates = ["2023-10-01", "2023-10-02", "2023-10-03"];
   const handleDateClick = (date) => {
     setActiveDate(moment(date).format("YYYY-MM-DD"));
     setOpenData(false);
+  };
+  const isDateDisabled = (date) => {
+    // Disable dates in the past or dates that are in the registeredDates list
+    return (
+      date < new Date() ||
+      registeredDates.includes(moment(date).format("YYYY-MM-DD"))
+    );
   };
   return (
     <div className={`add-user-popup-wrapper ${openData ? "open" : ""}`}>
@@ -20,7 +28,11 @@ const DataPopup = ({ openData, setOpenData, setActiveDate }) => {
           </a>
         </div>
         <div className="choose-hub-form">
-          <Calendar onClickDay={handleDateClick} />
+          <Calendar
+            onClickDay={handleDateClick}
+            /* make it so that the user can't choose a date that has already passed */
+            tileDisabled={({ date }) => isDateDisabled(date)}
+          />
         </div>
       </div>
     </div>
