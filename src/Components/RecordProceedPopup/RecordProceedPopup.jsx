@@ -98,7 +98,7 @@ const RecordProceedPopup = ({
             <p>{number}</p>
             <p>{details}</p>
             <p>{contacts}</p>
-            <p style={"font-weight: bold;"}>
+            <p style={{ fontWeight: "bold" }}>
               Наш адміністратор з вами звʼяжеться для уточнення деталей
             </p>
           </div>
