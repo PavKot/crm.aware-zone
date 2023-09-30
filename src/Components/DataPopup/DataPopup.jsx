@@ -12,7 +12,6 @@ const DataPopup = ({ openData, setOpenData, setActiveDate }) => {
     setOpenData(false);
   };
   const isDateDisabled = (date) => {
-    // Disable dates in the past or dates that are in the registeredDates list
     return (
       date < new Date() ||
       registeredDates.includes(moment(date).format("YYYY-MM-DD"))
@@ -30,7 +29,6 @@ const DataPopup = ({ openData, setOpenData, setActiveDate }) => {
         <div className="choose-hub-form">
           <Calendar
             onClickDay={handleDateClick}
-            /* make it so that the user can't choose a date that has already passed */
             tileDisabled={({ date }) => isDateDisabled(date)}
           />
         </div>

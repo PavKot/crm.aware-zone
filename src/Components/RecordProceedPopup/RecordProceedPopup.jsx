@@ -62,7 +62,7 @@ const RecordProceedPopup = ({
             />
             <input
               type="text"
-              placeholder="Додаткові деталі"
+              placeholder="Додаткові деталі (кількість учасників та учасниць)"
               id="recorddetails"
               name="recorddetails"
               onChange={(e) => setDetails(e.target.value)}
@@ -98,6 +98,9 @@ const RecordProceedPopup = ({
             <p>{number}</p>
             <p>{details}</p>
             <p>{contacts}</p>
+            <p style={"font-weight: bold;"}>
+              Наш адміністратор з вами звʼяжеться для уточнення деталей
+            </p>
           </div>
         </div>
       </div>
