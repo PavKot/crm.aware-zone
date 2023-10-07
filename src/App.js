@@ -6,6 +6,7 @@ import Calendar from "./Pages/Calendar";
 import Login from "./Pages/Login";
 import CheckAuth from "./Components/CheckAuth/CheckAuth";
 import Record from "./Pages/Record";
+import Form from "./Pages/Form";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/record" element={<Record />} />
+          <Route path="/form1" element={<Form />} />
           <Route path="/login" element={<Login />} />
           <Route
             path="/"
