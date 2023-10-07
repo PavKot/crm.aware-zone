@@ -23,6 +23,7 @@ const FormWrapper = () => {
       .post(process.env.REACT_APP_API_EMAIL_URL + "/form1", {
         name: document.getElementById("name").value,
         social: document.getElementById("social").value,
+        email: document.getElementById("email").value,
         about: document.getElementById("about").value,
       })
       .then((response) => {
@@ -76,6 +77,12 @@ const FormWrapper = () => {
               id="social"
               name="social"
               placeholder="Ваш контакт в соціальній мережі"
+            />
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Ваш email"
             />
             <input
               type="text"
