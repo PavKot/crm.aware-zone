@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./EventsCalendar.css";
+import { BiLinkExternal } from "react-icons/bi";
 
 const EventsCalendar = () => {
   const [events, setEvents] = useState([]);
@@ -49,7 +50,9 @@ const EventsCalendar = () => {
                   <p>{event.city}</p>
                 </div>
                 <div className="events-calendar-content-event-details">
-                  <a href="#">Детальніше</a>
+                  <a href="#">
+                    <BiLinkExternal />
+                  </a>
                 </div>
               </div>
             ))}
