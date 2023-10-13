@@ -23,6 +23,9 @@ const EventsCalendar = () => {
         <h1>Календар подій</h1>
         <div className="events-calendar-content">
           <div className="events-calendar-content-header">
+            <div className="events-calendar-content-header-details">
+              <h2>Назва</h2>
+            </div>
             <div className="events-calendar-content-header-date">
               <h2>Дата</h2>
             </div>
@@ -36,6 +39,9 @@ const EventsCalendar = () => {
           <div className="events-calendar-content-events">
             {events.map((event) => (
               <div className="events-calendar-content-event">
+                <div className="events-calendar-content-event-details">
+                  <p>{event.name}</p>
+                </div>
                 <div className="events-calendar-content-event-date">
                   <p>{event.date}</p>
                 </div>
