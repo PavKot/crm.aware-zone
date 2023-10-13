@@ -7,12 +7,14 @@ import Login from "./Pages/Login";
 import CheckAuth from "./Components/CheckAuth/CheckAuth";
 import Record from "./Pages/Record";
 import Form from "./Pages/Form";
+import EventsCalendar from "./Components/EventsCalendar/EventsCalendar";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/publicEvents" element={<EventsCalendar />} />
           <Route path="/record" element={<Record />} />
           <Route path="/form1" element={<Form />} />
           <Route path="/login" element={<Login />} />

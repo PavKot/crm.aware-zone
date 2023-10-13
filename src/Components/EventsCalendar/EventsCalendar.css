@@ -1,0 +1,55 @@
+/* events-calendar.css */
+.events-calendar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.events-calendar h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.events-calendar-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.events-calendar-content-header {
+  display: flex;
+  background-color: #1b417a;
+  color: white;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.events-calendar-content-header > div {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.events-calendar-content-events {
+  display: flex;
+  flex-direction: column;
+}
+
+.events-calendar-content-event {
+  display: flex;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.events-calendar-content-event > div {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.events-calendar-content-event-date {
+  background-color: #fff;
+}
+
+/* Add more styling as needed */
