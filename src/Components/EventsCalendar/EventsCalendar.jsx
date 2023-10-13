@@ -49,7 +49,7 @@ const EventsCalendar = () => {
                   <p>{event.city}</p>
                 </div>
                 <div className="events-calendar-content-event-details">
-                  <p>{event.name}</p>
+                  <a href="#">Детальніше</a>
                 </div>
               </div>
             ))}
