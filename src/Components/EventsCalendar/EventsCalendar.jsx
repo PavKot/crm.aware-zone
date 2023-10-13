@@ -53,6 +53,34 @@ const EventsCalendar = () => {
                 </div>
               </div>
             ))}
+            <div className="events-calendar-content-event">
+              <div className="events-calendar-content-event-details">
+                <p>aWARe Power</p>
+              </div>
+              <div className="events-calendar-content-event-date">
+                <p>15.10.2023</p>
+              </div>
+              <div className="events-calendar-content-event-place">
+                <p>Львів</p>
+              </div>
+              <div className="events-calendar-content-event-details">
+                <p>aWARe Power Test Event</p>
+              </div>
+            </div>
+            <div className="events-calendar-content-event">
+              <div className="events-calendar-content-event-details">
+                <p>aWARe Power</p>
+              </div>
+              <div className="events-calendar-content-event-date">
+                <p>15.10.2023</p>
+              </div>
+              <div className="events-calendar-content-event-place">
+                <p>Львів</p>
+              </div>
+              <div className="events-calendar-content-event-details">
+                <p>Серія зустрічей для дослідження потреб молодих ВПО</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
