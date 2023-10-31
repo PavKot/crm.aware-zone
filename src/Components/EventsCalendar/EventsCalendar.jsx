@@ -3,6 +3,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./EventsCalendar.css";
 import { BiLinkExternal } from "react-icons/bi";
+import emojiGlasses from "../../Images/emojiGlasses.png";
+import calendarHold from "../../Images/calendarHold.png";
 
 const EventsCalendar = () => {
   const [events, setEvents] = useState([]);
@@ -20,44 +22,26 @@ const EventsCalendar = () => {
   return (
     /* beautiful calendar of events for users */
     <>
-      <div className="events-calendar">
-        <h1>Календар подій</h1>
-        <div className="events-calendar-content">
-          <div className="events-calendar-content-header">
-            <div className="events-calendar-content-header-details">
-              <h2>Назва</h2>
-            </div>
-            <div className="events-calendar-content-header-date">
-              <h2>Дата</h2>
-            </div>
-            <div className="events-calendar-content-header-place">
-              <h2>Місце</h2>
-            </div>
-            <div className="events-calendar-content-header-details">
-              <h2>Деталі</h2>
-            </div>
-          </div>
-          <div className="events-calendar-content-events">
-            {events.map((event) => (
-              <div className="events-calendar-content-event">
-                <div className="events-calendar-content-event-details">
-                  <p>{event.name}</p>
-                </div>
-                <div className="events-calendar-content-event-date">
-                  <p>{event.date}</p>
-                </div>
-                <div className="events-calendar-content-event-place">
-                  <p>{event.city}</p>
-                </div>
-                <div className="events-calendar-content-event-details">
-                  <a href="#">
-                    <BiLinkExternal />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+      <div className="record-wrapper-header-block">
+        <div className="record-wrapper-header">
+          <h1>
+            Календар подій
+            <span>aWARe Zone</span>
+          </h1>
+          <img src={emojiGlasses} alt="emojiGlasses" />
         </div>
+      </div>
+      <div className="calendar-items">
+        {events.map((event) => (
+          <div className="calendar-item">
+            <img src={calendarHold} alt="" />
+            <h4>{event.name}</h4>
+            <div className="calendar-date-place">
+              <h4>{event.date}</h4>
+              <h4>{event.place}</h4>
+            </div>
+          </div>
+        ))}
       </div>
       <footer className="record-footer">
         <a href="https://aware-zone.com/">
