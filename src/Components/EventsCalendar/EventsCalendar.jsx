@@ -5,6 +5,7 @@ import "./EventsCalendar.css";
 import { BiLinkExternal } from "react-icons/bi";
 import emojiGlasses from "../../Images/emojiGlasses.png";
 import calendarHold from "../../Images/calendarHold.png";
+import calendarEnd from "../../Images/calendarEnd.png";
 
 const EventsCalendar = () => {
   const [events, setEvents] = useState([]);
@@ -34,7 +35,11 @@ const EventsCalendar = () => {
       <div className="calendar-items">
         {events.map((event) => (
           <div className="calendar-item">
-            <img src={calendarHold} alt="" />
+            {new Date(event.date) < new Date() ? (
+              <img src={calendarEnd} alt="" />
+            ) : (
+              <img src={calendarHold} alt="" />
+            )}
             <h4>{event.name}</h4>
             <div className="calendar-date-place">
               <h4>{event.date}</h4>
