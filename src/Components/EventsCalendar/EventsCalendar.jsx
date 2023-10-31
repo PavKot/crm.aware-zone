@@ -38,7 +38,7 @@ const EventsCalendar = () => {
             <h4>{event.name}</h4>
             <div className="calendar-date-place">
               <h4>{event.date}</h4>
-              <h4>{event.place}</h4>
+              <h4>{event.city}</h4>
             </div>
           </div>
         ))}
