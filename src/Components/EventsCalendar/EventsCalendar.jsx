@@ -56,7 +56,6 @@ const EventsCalendar = () => {
               <div className="calendar-date-place">
                 <h4>{event.date}</h4>
                 <h4>{event.city}</h4>
-                <p>{event.active}</p>
               </div>
             </div>
           );
