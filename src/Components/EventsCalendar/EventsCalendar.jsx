@@ -6,6 +6,7 @@ import { BiLinkExternal } from "react-icons/bi";
 import emojiGlasses from "../../Images/emojiGlasses.png";
 import calendarHold from "../../Images/calendarHold.png";
 import calendarEnd from "../../Images/calendarEnd.png";
+import calendarActive from "../../Images/calendarActive.png";
 
 const EventsCalendar = () => {
   const [events, setEvents] = useState([]);
@@ -35,13 +36,22 @@ const EventsCalendar = () => {
       <div className="calendar-items">
         {events.reverse().map((event) => {
           const isPastEvent = new Date(event.date) < new Date();
+          const isActiveEvent = event.active;
+
+          let imageSrc;
+          if (isPastEvent) {
+            imageSrc = calendarEnd;
+          } else if (!isPastEvent && isActiveEvent === 1) {
+            imageSrc = calendarActive;
+          } else if (!isPastEvent && isActiveEvent === 0) {
+            imageSrc = calendarHold;
+          } else {
+            imageSrc = calendarHold;
+          }
+
           return (
             <div className="calendar-item">
-              {isPastEvent ? (
-                <img src={calendarEnd} alt="" />
-              ) : (
-                <img src={calendarHold} alt="" />
-              )}
+              <img src={imageSrc} alt="" />
               <h4>{event.name}</h4>
               <div className="calendar-date-place">
                 <h4>{event.date}</h4>
