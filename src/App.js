@@ -26,14 +26,7 @@ function App() {
               </CheckAuth>
             }
           />
-          <Route
-            path="/calendar"
-            element={
-              <CheckAuth>
-                <Calendar />
-              </CheckAuth>
-            }
-          />
+          <Route path="/calendar" element={<Calendar />} />
           <Route
             path="/users"
             element={

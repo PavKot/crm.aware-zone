@@ -18,13 +18,15 @@ const AddEventPopup = ({ open, setOpen, selectedDate, setEvents }) => {
     name: "",
     date: formattedDate,
     city: "",
+    active: false,
   });
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value, type, checked } = event.target;
+    const newValue = type === "checkbox" ? checked : value;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: newValue,
     }));
   };
 
@@ -70,6 +72,16 @@ const AddEventPopup = ({ open, setOpen, selectedDate, setEvents }) => {
                 name="city"
                 id="city"
                 value={formData.city}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="add-user-popup-wrapper-content-form-item-chbox">
+              <label htmlFor="active">Відкрита подія</label>
+              <input
+                type="checkbox"
+                name="active"
+                id="active"
+                value={formData.active}
                 onChange={handleInputChange}
               />
             </div>

@@ -1,0 +1,16 @@
+#active {
+  display: flex;
+  justify-content: start;
+  max-width: 30px;
+  margin-top: 0;
+}
+
+.add-user-popup-wrapper-content-form-item-chbox {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.add-user-popup-wrapper-content-form-item-chbox label {
+  margin-bottom: 0;
+}

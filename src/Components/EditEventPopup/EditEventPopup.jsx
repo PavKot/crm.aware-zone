@@ -10,11 +10,10 @@ const EditEventPopup = ({ openEdit, setOpenEdit, activeItem, setEvents }) => {
   useEffect(() => {
     setEditedEvent(activeItem);
   }, [activeItem]);
-
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setEditedEvent({ ...editedEvent, [name]: value });
-    console.log(editedEvent);
+    const { name, value, type, checked } = e.target;
+    const newValue = type === "checkbox" ? checked : value;
+    setEditedEvent({ ...editedEvent, [name]: newValue });
   };
   const handleSubmit = () => {
     axios
@@ -67,6 +66,16 @@ const EditEventPopup = ({ openEdit, setOpenEdit, activeItem, setEvents }) => {
                 id="city"
                 onChange={handleInputChange}
                 value={editedEvent.city}
+              />
+            </div>
+            <div className="add-user-popup-wrapper-content-form-item-chbox">
+              <label htmlFor="active">Відкрита подія</label>
+              <input
+                type="checkbox"
+                name="active"
+                id="active"
+                value={editedEvent.active}
+                onChange={handleInputChange}
               />
             </div>
             <button onClick={handleSubmit}>Редагувати</button>
