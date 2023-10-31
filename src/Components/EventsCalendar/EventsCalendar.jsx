@@ -33,20 +33,23 @@ const EventsCalendar = () => {
         </div>
       </div>
       <div className="calendar-items">
-        {events.map((event) => (
-          <div className="calendar-item">
-            {new Date(event.date) < new Date() ? (
-              <img src={calendarEnd} alt="" />
-            ) : (
-              <img src={calendarHold} alt="" />
-            )}
-            <h4>{event.name}</h4>
-            <div className="calendar-date-place">
-              <h4>{event.date}</h4>
-              <h4>{event.city}</h4>
+        {events.reverse().map((event) => {
+          const isPastEvent = new Date(event.date) < new Date();
+          return (
+            <div className="calendar-item">
+              {isPastEvent ? (
+                <img src={calendarEnd} alt="" />
+              ) : (
+                <img src={calendarHold} alt="" />
+              )}
+              <h4>{event.name}</h4>
+              <div className="calendar-date-place">
+                <h4>{event.date}</h4>
+                <h4>{event.city}</h4>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
       <footer className="record-footer">
         <a href="https://aware-zone.com/">
