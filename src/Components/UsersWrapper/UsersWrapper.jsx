@@ -301,7 +301,7 @@ const UsersWrapper = () => {
                 ))}
           </div>
           <div className="users-wrapper-pagination">
-            {Array.from({ length: totalPages }, (_, index) => (
+            {/*}   {Array.from({ length: totalPages }, (_, index) => (
               <button
                 key={index}
                 onClick={() => paginate(index + 1)}
@@ -310,6 +310,37 @@ const UsersWrapper = () => {
                 {index + 1}
               </button>
             ))}
+        */}
+            {Array.from({ length: Math.min(totalPages, 6) }, (_, index) => {
+              if (index < 3 || index >= totalPages - 3) {
+                return (
+                  <button
+                    key={index}
+                    onClick={() => paginate(index + 1)}
+                    className={currentPage === index + 1 ? "active" : ""}
+                  >
+                    {index + 1}
+                  </button>
+                );
+              } else if (index === 3) {
+                return <span key={index}>...</span>;
+              }
+            })}
+
+            <button
+              onClick={() => paginate(1)}
+              className={currentPage === 1 ? "active" : ""}
+            >
+              {" "}
+              {`<<`}{" "}
+            </button>
+            <button
+              onClick={() => paginate(totalPages)}
+              className={currentPage === totalPages ? "active" : ""}
+            >
+              {" "}
+              {`>>`}{" "}
+            </button>
           </div>
         </div>
       </div>
