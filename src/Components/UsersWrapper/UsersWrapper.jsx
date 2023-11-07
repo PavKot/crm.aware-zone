@@ -341,6 +341,9 @@ const UsersWrapper = () => {
               {" "}
               {`>>`}{" "}
             </button>
+            <button onClick={() => paginate(currentPage - 1)}>{`<`}</button>
+
+            <button onClick={() => paginate(currentPage + 1)}>{`>`}</button>
           </div>
         </div>
       </div>
