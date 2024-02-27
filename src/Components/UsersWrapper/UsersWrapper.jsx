@@ -88,13 +88,9 @@ const UsersWrapper = () => {
   const sortByVisitTimes = () => {
     let sortedUsers;
     if (sortDirection === "asc") {
-      sortedUsers = [...filteredUsers].sort(
-        (a, b) => a.visitTimes - b.visitTimes
-      );
+      sortedUsers = [...filteredUsers].sort((a, b) => a.visits - b.visits);
     } else {
-      sortedUsers = [...filteredUsers].sort(
-        (a, b) => b.visitTimes - a.visitTimes
-      );
+      sortedUsers = [...filteredUsers].sort((a, b) => b.visits - a.visits);
     }
     setFilteredUsers(sortedUsers);
     setSortDirection(sortDirection === "asc" ? "desc" : "asc");
